@@ -1,0 +1,26 @@
+-x
+objective-c++
+-arch
+armv7
+-fretain-comments-from-system-headers
+-fpascal-strings
+-O0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk
+-g
+-fvisibility=hidden
+-fvisibility-inlines-hidden
+-miphoneos-version-min=4.3
+-iquote
+-iquote
+-I/Users/wangbo/Work/projs/monicar_6/DerivedData/Test/Build/Products/Debug-iphoneos/include
+-F/Users/wangbo/Work/projs/monicar_6/DerivedData/Test/Build/Products/Debug-iphoneos
+-F/Applications/Xcode.app/Contents/Developer/Library/Frameworks
+-ferror-limit=10
+-working-directory=/Users/wangbo/Work/projs/monicar_6
+-Xclang
+-detailed-preprocessing-record
+arm-apple-darwin14.4.0
+"4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.54)"
+SDK_PRODUCT_BUILD_VERSION=12B411
+12B411
