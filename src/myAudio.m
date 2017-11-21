@@ -196,9 +196,9 @@ void interruptionListenerCallback(void  *inUserData ,UInt32 interruptionState){
 	alGetSourcei(outSourceID, AL_BUFFERS_QUEUED, &queued);
 	
 	
-	NSLog(@"Processed = %d\n", processed);
+//    NSLog(@"Processed = %d\n", processed);
 	
-	NSLog(@"Queued = %d\n", queued);
+//    NSLog(@"Queued = %d\n", queued);
 	
 	
     while(processed--)

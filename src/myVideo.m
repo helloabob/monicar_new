@@ -134,7 +134,8 @@ int videoflag=0;
 	CGContextRef context = CGBitmapContextCreate(pxdata, size.width, size.height, 8, 4*size.width, rgbColorSpace, kCGImageAlphaPremultipliedFirst);
 	NSParameterAssert(context);
 	
-	CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(image1), CGImageGetHeight(image1)), image1);
+//    CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(image1), CGImageGetHeight(image1)), image1);
+    CGContextDrawImage(context, CGRectMake(0, 0, size.width, size.height), image1);
 	
 	CGColorSpaceRelease(rgbColorSpace);
 	CGContextRelease(context);
@@ -157,7 +158,7 @@ int videoflag=0;
 	
 	//NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"movie" ofType:@"mov"];
 	
-	size = CGSizeMake(screenWidth,screenWidth/4*3);//定义视频的大�?
+	size = CGSizeMake(320,240);//定义视频的大�?
 	NSError *error = nil;
 	
 	//unlink([moviePath UTF8String]);

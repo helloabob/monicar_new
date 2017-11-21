@@ -1,4 +1,4 @@
-﻿#import "AsyncSocket.h"
+#import "AsyncSocket.h"
 #import "spcaframe.h"
 #import "myAudio.h"
 #import "myVideo.h"
@@ -32,7 +32,7 @@
     myVideo *mV;
 }
 
--(void)test:(int)cmd;
+-(void)sendCmd:(int)cmd;
 -(void)pushcmd:(char)state cmd:(char)cmd;
 -(void)pushreccmd;
 -(void)startrecpath;

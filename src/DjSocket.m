@@ -22,7 +22,7 @@ int timestamp;
 
 #pragma mark 发送
 
--(void)test:(int)cmd{
+-(void)sendCmd:(int)cmd{
 	static int serial=0;
 	
 	mCmdPack.signature=0x7E;
@@ -141,6 +141,7 @@ int timestamp;
 			rec_offset++;
 		}
 	}
+    [self sendCmd:0];
 }
 
 -(void)movebyte:(char *)buf length:(int)length
@@ -273,7 +274,7 @@ int timestamp;
 			offset += ret;
 		}
 	}
-	[self test:0];
+//    [self sendCmd:0];
 }
 /*
  -(void)on_Recv:(char*)data length:(int)length{
@@ -384,7 +385,7 @@ int timestamp;
 
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
     
-    NSLog(@"--did receive video ---\n");
+//    NSLog(@"--did receive video ---\n");
     
 	[self on_Recv:(char*)[data bytes] length:[data length]];
     [socket readDataWithTimeout:-1 tag:0];
