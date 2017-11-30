@@ -23,6 +23,8 @@ int timestamp;
 #pragma mark 发送
 
 -(void)sendCmd:(int)cmd{
+//    NSLog(@"send_data_value=[%d]", cmd);
+    
 	static int serial=0;
 	
 	mCmdPack.signature=0x7E;
@@ -141,7 +143,7 @@ int timestamp;
 			rec_offset++;
 		}
 	}
-    [self sendCmd:0];
+//    [self sendCmd:0];
 }
 
 -(void)movebyte:(char *)buf length:(int)length
@@ -274,7 +276,10 @@ int timestamp;
 			offset += ret;
 		}
 	}
-//    [self sendCmd:0];
+//    if (play_state) {
+        [self sendCmd:0];
+//    }
+    
 }
 /*
  -(void)on_Recv:(char*)data length:(int)length{
